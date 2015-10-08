@@ -1,0 +1,19 @@
+{
+  "name": "jesse-planet",
+  "version": "0.0.0",
+  "description": "experiments with the planet-client",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "browserify src.js -o index.js -w &",
+    "build-css": "postcss src.css -u postcss-import -o index.css -w &",
+    "prestart": "npm run build-js && npm run build-css"
+  },
+  "author": "Jesse Hattabaugh <jesse.hattabaugh@planet.com",
+  "license": "Artistic-2.0",
+  "dependencies": {
+    "browserify": "^11.2.0",
+    "leaflet": "^0.7.5",
+    "planet-client": "^0.15.0",
+    "postcss-import": "^7.0.0"
+  }
+}
